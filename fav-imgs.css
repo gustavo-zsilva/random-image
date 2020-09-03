@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+:root {
+    --black: #130f0d;
+    --primary: #fd951f;
+    --primary-dark: #dd7b0c;
+    --white: #f0f0f9;
+    --darker-white: rgb(143, 142, 142);
+    --dark-white: rgb(204, 204, 204);
+    --red: rgb(253, 31, 31);
+    --dark-red: rgb(211, 9, 9);
+}
+
+.hide {
+    display: none;
+    
+}
+
+* {
+    font-family: 'Roboto', sans-serif;
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+
+    background: var(--black);
+
+    display: flex;
+    flex-direction: column;
+
+}
+
+main {
+    color: var(--white);
+    
+    margin: auto;
+}
+
+main h1 {
+    text-align: center;
+    padding-bottom: .6rem;
+    max-width: 50vw;
+    margin: 2rem auto;
+    border-bottom: 1px solid var(--primary);
+}
+
+main .images {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+}
+
+main .images img {
+    width: 100%;
+    height: 30vh;
+    object-fit: cover;
+
+    position: relative;
+
+    border: 1px solid var(--black);
+    margin-top: 1rem;
+    cursor: pointer;
+}
+
+main .sleepy-img {
+    display: flex;
+
+    width: 0;
+    margin: 0 auto 2rem;
+}
+
+main p {
+    text-align: center;
+    color: var(--darker-white);
+    font-size: 1rem;
+    margin: auto 1rem;
+    line-height: 1.7rem;
+}
+
+.modal {
+    height: 100vh;
+    width: 100vw;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #130f0d34;
+}
+
+.modal img.exit-image {
+    width: 40px;
+    position: absolute;
+    top: 2rem;
+    left: 1rem;
+
+    cursor: pointer;
+}
+
+.modal button {
+    position: absolute;
+
+    width: 20vw;
+    top: 2rem;
+    right: 1rem;
+
+    padding: .6rem;
+    color: var(--white);
+    background-color: var(--red);
+
+    border: 2px solid var(--dark-red);
+    border-radius: .2rem;
+
+    font-size: .9rem;
+
+    cursor: pointer;
+}
+
+.modal img.modal-image {
+    display: flex;
+
+    margin: 6rem auto;
+    height: 80vh;
+    width: 80vw;
+
+    object-fit: cover;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+}
+
+footer button {
+    padding: .8rem;
+    margin: 2rem auto 0;
+    background: var(--red);
+    border: 2px solid var(--dark-red);
+    color: var(--white);
+    font-size: .9rem;
+    width: 35vw;
+    border-radius: .2rem;
+    cursor: pointer;
+    line-height: 1.2rem;
+    outline: none;
+}
+
+footer p {
+    margin: 2rem auto;
+    color: var(--dark-white);
+}
+
+footer p a {
+    text-decoration: none;
+    margin-left: .1rem;
+    color: var(--primary);
+    transition: 0.2s;
+}
+
+footer p a:hover {
+    color: var(--primary-dark);
+}
+
+@media screen and (min-width: 1200px) {
+    main h1 {
+        padding-bottom: .8rem;
+    }
+
+    main .images img {
+        width: 90%;
+        margin: 1rem;
+    }
+}
+
